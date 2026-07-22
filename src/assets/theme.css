@@ -1,0 +1,29 @@
+/* src/assets/theme.css */
+
+:root {
+  /* Light theme (default) */
+  --color-bg: #FAFAFA;
+  --color-primary: #14B8A6;
+  --color-text: #0A0A0A;
+
+  /* Typography */
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-lg: 2rem;
+  --font-size-base: 1rem;
+
+  /* Spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0D1117;
+  --color-primary: #7DD3FC;
+  --color-text: #F2F2F2;
+}
+
+body{
+    font-family: var(--font-family-base);
+    margin: 0;
+}
