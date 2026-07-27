@@ -24,6 +24,7 @@ import ThemeToggle from '@/components/ThemeToggle.vue';
     background: var(--color-bg);
     color: var(--color-text);
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .page-header{

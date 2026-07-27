@@ -1,9 +1,12 @@
 <script setup>
 import DefaultLayout from './layouts/DefaultLayout.vue'
+import Hero from './components/Hero.vue'
+import Timeline from './components/Timeline.vue';
 </script>
 
 <template>
   <DefaultLayout>
-    <p>Hero page content will go here</p>
+    <Hero />
+    <Timeline />
   </DefaultLayout>
 </template>
