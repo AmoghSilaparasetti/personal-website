@@ -30,21 +30,16 @@ const timeLineEntries: TimeLineEntry[] = [
         organization: "Swingtech (Remote)",
         dateRange: "May 2022 - Oct 2024",
         description: [
-            {id:"1",text:"Initiated a virtual reality Fire Safety training module for hospitals using Unity Game Engine and C#, advancing training immersion."},
-            {id:"2",text:"Automated PII extraction from unstructured email data, achieving a 90% accuracy rate and saving 10+ weekly man-hours."},
-            {id:"3",text:"Developed a demo website serving as a central hub to consolidate company innovation team data and analytics efforts."},
-            {id:"4",text:"Worked on a Python-Flask application utilizing AI models to grade student answers based on customizable rubric criteria."}
+            {id:"1",text:"Automated PII extraction from unstructured email data, achieving a 90% accuracy rate and saving 10+ weekly man-hours."}
         ]
     },
     {
         id: "t3",
         title:"Software Engineer Co-op",
         organization: "Siemens Digital Industries Software at Milford, Ohio (Hybrid)",
-        dateRange: "Jan - Apr, Aug - Dec 2024, May - Aug 2025",
+        dateRange: "Jan - Apr 2024, Aug - Dec 2024, May - Aug 2025",
         description: [
-            {id:"1",text:"Debugged and implemented features in both Teamcenter’s Client and Server-Side development units using in-house dev tools programmed in C++, JavaScript, and a React-based framework."},
-            {id:"2",text:"Engineered 3 features for Structure Variant Configuration, enhancing Teamcenter’s data retrieval efficiency and customization."},
-            {id:"3",text:"Added 2 new tools for Teamcenter’s BOM Agent AI using Python and SOA calls to query and retrieve rollup report data, saving 1+ hours per query."}
+            {id:"1",text:"Engineered 3 features for Teamcenter's Structure Variant Configuration and built 2 Python/SOA tools for its BOM Agent AI."}
         ]
     },
     {
@@ -59,24 +54,33 @@ const timeLineEntries: TimeLineEntry[] = [
     },
     {
         id: "t5",
-        title:"Student Associate",
-        organization: "University of Cincinnati",
-        dateRange: "May - Aug 2026",
+        title: "Video Game Prototypes",
+        organization: "University of Cincinnati (Coursework)",
+        dateRange: "Jan - Apr 2026",
         description: [
-            {id:"1",text:"Configured and calibrated software and hardware based on CAVE (Cave Automatic Virtual Environment) for academicpurposes."},
-            {id:"2",text:"Researched and Developed VR software using Unreal nDisplay and Unity to enhance classroom engagement and facilitate immersive learning experiences within the CAVE environment."}
-        ]    
+            {id:"1", text:"Built a video game prototype each week based on the given constraint(s)."},
+            {id:"2", text:"Itch.io", link:"https://gba001.itch.io/"}
+        ]
     },
     {
         id: "t6",
-        title:"Software Engineer (Contract)",
-        organization: "Wavwarehouse",
+        title: "Student Associate",
+        organization: "University of Cincinnati - VR Room",
         dateRange: "May 2026 - Present",
         description: [
-            {id:"1",text:"Implemented additional features and resolved bugs on an existing vue.js website with the help of AI"}
+            {id:"1", text:"Physically built and is synchronizing a 300-degree, 20-column curved VR screen using Matrox boxes."}
         ]
-        /* Implemented only 2 features so far. Recently assinged to add more and fix bugs.*/
-    }
+    },
+    {
+        id: "t7",
+        title: "Software Engineer (Contract)",
+        organization: "Wavwarehouse",
+        dateRange: "June 2026 - Present",
+        description: [
+            {id:"1", text:"Built a royalty-free and dynamic-splits generator for audio samples."},
+            {id:"2", text:"Fixed a pagination bug affecting library/playlist navigation."}
+        ]
+    },
 ]
 </script>
 
@@ -84,11 +88,11 @@ const timeLineEntries: TimeLineEntry[] = [
     <section id="timeline" class="timeline">
         <h2>Timeline</h2>
         <ul>
-            <li v-for=" timeline in timeLineEntries" :key="timeline.id">
+            <li v-for=" timeline in timeLineEntries" :key="timeline.id" class="entry">
                 <h3>{{ timeline.title }}</h3>
                 <h4>{{ timeline.organization }} - {{ timeline.dateRange }}</h4>
                 <ul>
-                    <li v-for="point in timeline.description" :key="point.id">
+                    <li v-for="point in timeline.description" :key="point.id" class="point">
                         <a v-if="point.link" :href="point.link" target="_blank" rel="noopener noreferrer">
                             {{ point.text }}
                         </a>
@@ -102,7 +106,16 @@ const timeLineEntries: TimeLineEntry[] = [
 
 <style scoped>
 .timeline{
-    padding: var(--spacing-x1, 4rem) var(--spacing-md, 1.5rem);
+    padding: var(--space-sm, 0.5rem);
+    color: var(--color-head, inherit);
+}
+
+.entry{
+    margin-bottom: var(--space-md, 1rem);
+    color: var(--color-head, inherit);
+}
+
+.point{
     color: var(--color-text, inherit);
 }
 </style>

@@ -5,6 +5,7 @@
   --color-bg: #FAFAFA;
   --color-primary: #14B8A6;
   --color-text: #0A0A0A;
+  --color-head: #0c7467;
 
   /* Typography */
   --font-family-base: 'Inter', sans-serif;
@@ -19,8 +20,9 @@
 
 [data-theme="dark"] {
   --color-bg: #0D1117;
-  --color-primary: #7DD3FC;
+  --color-head: #7DD3FC;
   --color-text: #F2F2F2;
+  --color-primary: #00aeff;
 }
 
 body{

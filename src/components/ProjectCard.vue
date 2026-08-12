@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 interface ProjectCard {
   id: string;
   title: string;
@@ -39,28 +40,52 @@ const projects: ProjectCard[] = [
     status: "completed",
   },
 ];
+
+const expandedId = ref<string | null>(null)
 </script>
 
 <template>
-  <h2>Featured Projects</h2>
-  <ul>
-    <li v-for="project in projects" :key="project.id">
-      <h3>{{ project.title }}</h3>
-      <b v-if="project.status === 'in-progress'"> In Progress </b>
-      <p>{{ project.description }}</p>
-      <p>
-        <b>Tech Stack: </b>
-        <i v-for="(tech, index) in project.techStack" :key="index">
-          {{ tech }}
-        </i>
-      </p>
-      <img
-        v-if="project.imageUrl"
-        :src="project.imageUrl"
-        :alt="project.title"
-      />
-      <a v-if="project.demoUrl" :href="project.demoUrl">Demo</a>
-      <a v-if="project.githubUrl" :href="project.githubUrl">Github</a>
-    </li>
-  </ul>
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <ul>
+      <li v-for="project in projects" :key="project.id" class="project">
+        <h3 @click="expandedId = project.id">{{ project.title }}</h3>
+        <div v-if="expandedId === project.id" class="info">
+          <b v-if="project.status === 'in-progress'"> In Progress </b>
+          <p>{{ project.description }}</p>
+          <p>
+            <b>Tech Stack: </b>
+            <i v-for="(tech, index) in project.techStack" :key="index">
+              {{ tech }}
+              <span v-if="index !== project.techStack.length - 1">, </span>
+            </i>
+          </p>
+          <img
+            v-if="project.imageUrl"
+            :src="project.imageUrl"
+            :alt="project.title"
+          />
+          <a v-if="project.demoUrl" :href="project.demoUrl" target="_blank" rel="noopener noreferrer">Demo</a>
+          <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+  
 </template>
+
+<style scoped>
+.projects{
+    padding: var(--space-sm, 0.5rem);
+    color: var(--color-head, inherit);
+}
+
+.project{
+    margin-bottom: var(--space-md, 1rem);
+    color: var(--color-head, inherit);
+}
+
+.info{
+  color: var(--color-text, inherit);
+}
+</style>
