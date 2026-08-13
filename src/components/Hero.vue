@@ -2,7 +2,9 @@
 import Contact from "./Contact.vue";
 import { ref } from "vue";
 
-const tagline = ref("VR roots. Enterprise systems. Applied ML.");
+const tagline = ref(
+  "Software engineer from the University of Cincinnati, working across VR, enterprise systems, and applied ML.",
+);
 </script>
 
 <template>
