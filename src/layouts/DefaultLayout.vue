@@ -4,7 +4,7 @@ import Hero from "@/components/Hero.vue";
 import { useActiveSection } from "@/composables/useActiveSection";
 
 const { activeSection, setActiveSection } = useActiveSection();
-const sections = ["Timeline", "Experience", "Projects", "Skills"];
+const sections = ["Timeline", "Experience", "Projects", "Skills"] as const;
 </script>
 
 <template>
