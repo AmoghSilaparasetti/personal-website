@@ -2,13 +2,14 @@
 
 :root {
   /* Light theme (default) */
-  --color-bg: #FAFAFA;
-  --color-primary: #14B8A6;
-  --color-text: #0A0A0A;
+  --color-bg: #fafafa;
+  --color-primary: #14b8a6;
+  --color-on-primary: var(--color-text);
+  --color-text: #0a0a0a;
   --color-head: #0c7467;
 
   /* Typography */
-  --font-family-base: 'Inter', sans-serif;
+  --font-family-base: "Inter", sans-serif;
   --font-size-lg: 2rem;
   --font-size-base: 1rem;
 
@@ -19,13 +20,14 @@
 }
 
 [data-theme="dark"] {
-  --color-bg: #0D1117;
-  --color-head: #7DD3FC;
-  --color-text: #F2F2F2;
+  --color-bg: #0d1117;
+  --color-head: #7dd3fc;
+  --color-text: #f2f2f2;
   --color-primary: #00aeff;
+  --color-on-primary: var(--color-bg);
 }
 
-body{
-    font-family: var(--font-family-base);
-    margin: 0;
+body {
+  font-family: var(--font-family-base);
+  margin: 0;
 }
