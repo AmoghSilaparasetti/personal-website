@@ -4,16 +4,11 @@ import Hero from "@/components/Hero.vue";
 import { useActiveSection } from "@/composables/useActiveSection";
 
 const { activeSection, setActiveSection } = useActiveSection();
-const sections = ["Timeline", "Experience", "Projects", "Skills"] as const;
+const sections = ["Experience", "Projects", "Skills"] as const;
 </script>
 
 <template>
   <div class="page">
-    <header class="page-header">
-      <span class="logo">Amogh Silaparasetti</span>
-      <ThemeToggle />
-    </header>
-
     <main>
       <Hero />
       <br />

@@ -1,17 +1,12 @@
 import { ref, watchEffect, type Ref } from "vue";
 
-type Section = "Timeline" | "Experience" | "Projects" | "Skills";
+type Section = "Experience" | "Projects" | "Skills";
 
 function isValidSection(value: string | null): value is Section {
-  return (
-    value === "Timeline" ||
-    value === "Experience" ||
-    value === "Projects" ||
-    value === "Skills"
-  );
+  return value === "Experience" || value === "Projects" || value === "Skills";
 }
 
-const activeSection: Ref<Section> = ref("Timeline");
+const activeSection: Ref<Section> = ref("Experience");
 
 watchEffect(() => {
   localStorage.setItem("activeSection", activeSection.value);

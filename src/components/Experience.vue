@@ -19,25 +19,46 @@ interface Company {
 
 const companies: Company[] = [
   {
-    id: "c1",
-    name: "Swingtech (Remote)",
-    title: "Software Engineer Intern",
+    id: "c7",
+    name: "Wavwarehouse (Remote)",
+    title: "Software Engineer (Contract)",
     stints: [
       {
-        id: "swingtech-1",
-        dateRange: "May 2022 - Oct 2024",
+        id: "1",
+        dateRange: "June 2026 - Present",
         points: [
           {
             id: "1",
-            text: "Built VR fire-safety and Life Safety Code training simulations in Unity/C# using the XR Interaction Toolkit, supporting both desktop/web and mobile VR, including tutorial modules teaching core VR controls like locomotion and object interaction.",
+            text: "Built a royalty-free and dynamic-splits generator for audio samples, automating how royalty terms are calculated and applied.",
           },
           {
             id: "2",
-            text: "Developed a Flask-based PII detection tool using NLP and OCR (PIL, pandas) to scan uploaded documents and Outlook emails, flagging PII type and location with ~90% accuracy instead of exposing the sensitive data directly.",
+            text: "Fixed a pagination bug that broke navigation when switching between libraries and playlists.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "c6",
+    name: "University of Cincinnati - VR Room",
+    title: "Student Associate",
+    stints: [
+      {
+        id: "1",
+        dateRange: "May 2026 - Aug 2026",
+        points: [
+          {
+            id: "1",
+            text: "Researched Unity vs. Unreal Engine to determine the right software foundation for a large-scale immersive VR display.",
+          },
+          {
+            id: "2",
+            text: "Physically built a 300-degree immersive screen from 20 columns of dual monitors, each angled 15 degrees inward to form a continuous curved display.",
           },
           {
             id: "3",
-            text: "Built GeniusAI Grader, a Flask web app integrating GPT-4 to auto-grade student answers against teacher-defined rubrics, including LaTeX-aware scanning of handwritten math work, and improved grading accuracy through prompt engineering.",
+            text: "Synchronizing 8 screens using Matrox boxes to drive unified content across the full display (in progress).",
           },
         ],
       },
@@ -93,50 +114,29 @@ const companies: Company[] = [
     ],
   },
   {
-  id: "c6",
-  name: "University of Cincinnati - VR Room",
-  title: "Student Associate",
-  stints: [
-    {
-      id: "1",
-      dateRange: "May 2026 - Present",
-      points: [
-        {
-          id: "1",
-          text: "Researched Unity vs. Unreal Engine to determine the right software foundation for a large-scale immersive VR display.",
-        },
-        {
-          id: "2",
-          text: "Physically built a 300-degree immersive screen from 20 columns of dual monitors, each angled 15 degrees inward to form a continuous curved display.",
-        },
-        {
-          id: "3",
-          text: "Synchronizing 8 screens using Matrox boxes to drive unified content across the full display (in progress).",
-        },
-      ],
-    },
-  ],
-  },
-  {
-  id: "c7",
-  name: "Wavwarehouse (Remote)",
-  title: "Software Engineer (Contract)",
-  stints: [
-    {
-      id: "1",
-      dateRange: "June 2026 - Present",
-      points: [
-        {
-          id: "1",
-          text: "Built a royalty-free and dynamic-splits generator for audio samples, automating how royalty terms are calculated and applied.",
-        },
-        {
-          id: "2",
-          text: "Fixed a pagination bug that broke navigation when switching between libraries and playlists.",
-        },
-      ],
-    },
-  ],
+    id: "c1",
+    name: "Swingtech (Remote)",
+    title: "Software Engineer Intern",
+    stints: [
+      {
+        id: "swingtech-1",
+        dateRange: "May 2022 - Oct 2024",
+        points: [
+          {
+            id: "1",
+            text: "Built VR fire-safety and Life Safety Code training simulations in Unity/C# using the XR Interaction Toolkit, supporting both desktop/web and mobile VR, including tutorial modules teaching core VR controls like locomotion and object interaction.",
+          },
+          {
+            id: "2",
+            text: "Developed a Flask-based PII detection tool using NLP and OCR (PIL, pandas) to scan uploaded documents and Outlook emails, flagging PII type and location with ~90% accuracy instead of exposing the sensitive data directly.",
+          },
+          {
+            id: "3",
+            text: "Built GeniusAI Grader, a Flask web app integrating GPT-4 to auto-grade student answers against teacher-defined rubrics, including LaTeX-aware scanning of handwritten math work, and improved grading accuracy through prompt engineering.",
+          },
+        ],
+      },
+    ],
   },
 ];
 </script>
@@ -148,9 +148,14 @@ const companies: Company[] = [
       <h3>{{ company.name }} - {{ company.title }}</h3>
       <div v-for="stint in company.stints" :key="stint.id" class="stint">
         <h4>{{ stint.dateRange }}</h4>
-        <ul> 
+        <ul>
           <li v-for="point in stint.points" :key="point.id" class="point">
-            <a v-if="point.link" :href="point.link" target="_blank" rel="noopener noreferrer">
+            <a
+              v-if="point.link"
+              :href="point.link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {{ point.text }}
             </a>
             <span v-else>{{ point.text }}</span>
@@ -162,20 +167,20 @@ const companies: Company[] = [
 </template>
 
 <style scoped>
-.experience{
+.experience {
   padding: var(--space-sm, 0.5rem);
   color: var(--color-head, inherit);
 }
-.company{
+.company {
   margin-bottom: var(--space-md, 1rem);
   color: var(--color-text, inherit);
 }
 
-.stint{
+.stint {
   margin-bottom: var(--space-md, 1rem);
   color: var(--color-head, inherit);
 }
-.point{
+.point {
   color: var(--color-text, inherit);
 }
 </style>
