@@ -9,6 +9,7 @@ const sections = ["Experience", "Projects", "Skills"] as const;
 
 <template>
   <div class="page">
+    <ThemeToggle />
     <main>
       <Hero />
       <br />
