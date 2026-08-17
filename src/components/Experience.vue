@@ -29,11 +29,11 @@ const companies: Company[] = [
         points: [
           {
             id: "1",
-            text: "Built a royalty-free and dynamic-splits generator for audio samples, automating how royalty terms are calculated and applied.",
+            text: "Built a royalty-free and dynamic-splits generator for audio samples, automating how royalty terms are calculated and applied. (In Development)",
           },
           {
             id: "2",
-            text: "Fixed a pagination bug that broke navigation when switching between libraries and playlists.",
+            text: "Fixed a pagination bug that broke navigation when switching between libraries and playlists. (In Development)",
           },
         ],
       },
