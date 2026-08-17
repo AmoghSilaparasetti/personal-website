@@ -70,16 +70,16 @@ const companies: Company[] = [
     title: "Software Engineer Co-op",
     stints: [
       {
-        id: "c3",
-        dateRange: "Jan - Apr 2024",
+        id: "c5",
+        dateRange: "May - Aug 2025",
         points: [
           {
             id: "1",
-            text: "Debugged and implemented features across Teamcenter's client and server-side codebases using an in-house React-based framework, JavaScript, and C++, submitting changes through Siemens' internal DOUG version-control system.",
+            text: "Built 2 Python tools for Teamcenter's BOM Agent AI, using SOA calls to create and retrieve rollup reports on demand, saving 1+ hours per manual query.",
           },
           {
             id: "2",
-            text: "Implemented a Solution Variant Table on the search page's preview panel, letting users view and select item variants without opening the item in a new page, via a new SOA (Service-Oriented Architecture) client call.",
+            text: "Designed the AI's tool-calling interface so it maps user questions (e.g. part mass, highest-mass component) to the correct rollup report data without manual lookup.",
           },
         ],
       },
@@ -98,16 +98,16 @@ const companies: Company[] = [
         ],
       },
       {
-        id: "c5",
-        dateRange: "May - Aug 2025",
+        id: "c3",
+        dateRange: "Jan - Apr 2024",
         points: [
           {
             id: "1",
-            text: "Built 2 Python tools for Teamcenter's BOM Agent AI, using SOA calls to create and retrieve rollup reports on demand, saving 1+ hours per manual query.",
+            text: "Debugged and implemented features across Teamcenter's client and server-side codebases using an in-house React-based framework, JavaScript, and C++, submitting changes through Siemens' internal DOUG version-control system.",
           },
           {
             id: "2",
-            text: "Designed the AI's tool-calling interface so it maps user questions (e.g. part mass, highest-mass component) to the correct rollup report data without manual lookup.",
+            text: "Implemented a Solution Variant Table on the search page's preview panel, letting users view and select item variants without opening the item in a new page, via a new SOA (Service-Oriented Architecture) client call.",
           },
         ],
       },
