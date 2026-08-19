@@ -75,10 +75,14 @@ const companies: Company[] = [
         points: [
           {
             id: "1",
-            text: "Built 2 Python tools for Teamcenter's BOM Agent AI, using SOA calls to create and retrieve rollup reports on demand, saving 1+ hours per manual query.",
+            text: "Added Managed and Unmanaged release statuses to Teamcenter's Structure Variant Configuration, giving users control over whether a variant's BOM is auto-generated from configuration rules or manually defined.",
           },
           {
             id: "2",
+            text: "Built 2 Python tools for Teamcenter's BOM Agent AI, using SOA calls to create and retrieve rollup reports on demand, saving 1+ hours per manual query.",
+          },
+          {
+            id: "3",
             text: "Designed the AI's tool-calling interface so it maps user questions (e.g. part mass, highest-mass component) to the correct rollup report data without manual lookup.",
           },
         ],
@@ -89,10 +93,6 @@ const companies: Company[] = [
         points: [
           {
             id: "1",
-            text: "Added Managed and Unmanaged release statuses to Teamcenter's Structure Variant Configuration, giving users control over whether a variant's BOM is auto-generated from configuration rules or manually defined.",
-          },
-          {
-            id: "2",
             text: "Resolved stories and defects across Structure Variant Configuration, improving data retrieval efficiency and customization for configured items.",
           },
         ],
